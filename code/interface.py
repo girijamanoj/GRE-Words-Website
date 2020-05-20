@@ -60,4 +60,4 @@ if __name__ == "__main__":
 			else:
 				print ("No references found")
 		else:
-			print ("Invalid Word")
+			print ("we have encountered a new Word we will update it soon")

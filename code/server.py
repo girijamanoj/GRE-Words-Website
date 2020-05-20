@@ -3,7 +3,7 @@ import json
 from flask import Flask, render_template
 from pymongo import MongoClient
 
-app = Flask(__name__, template_folder="/home/sharingan/Desktop/Work/Software Engineering/code/Website")
+app = Flask(__name__, template_folder="yourdir/GRE-Words-Website/GRE-Words-Website/code/frontend")
 # mongo contains reference to the words db
 mongo = MongoClient('mongodb://127.0.0.1:27017').words
 

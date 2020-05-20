@@ -29,7 +29,7 @@ if __name__ == "__main__":
 			exit(0)
 
 		for book_name in os.listdir(global_data['sentences_folder_path'][book_source]):
-			print ("Book: " + book_name)	#TRACK
+			print ("Chunk: " + book_name)	#TRACK
 			#splittext is used because book_name will contain a .txt extension, our folder name will not contain it
 			chunk_folder_for_book_path = os.path.join(global_data['chunks_folder_path'][book_source],os.path.splitext(book_name)[0])
 			sentences_file_path = os.path.join(global_data['sentences_folder_path'][book_source],book_name)

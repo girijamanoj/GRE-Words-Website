@@ -94,6 +94,7 @@ if __name__ == "__main__":
 	max_tries = int(input("Enter no of docs to be scraped "))
 	start_time = time.time()
 	global_data = get_global_data()
+	
 	wordlist = get_wordlist(json_format=True)
 	# print (wordlist)
 	create_folder(global_data['books_folder_path']['wikipedia'])
@@ -101,7 +102,7 @@ if __name__ == "__main__":
 	scraped = 0
 	links = [[] for i in range(global_data['cores_count'])]
 	pool = multiprocessing.Pool(processes=global_data['cores_count'])
-	args = [(max_tries//global_data['cores_count'],) for i in range(global_data['cores_count'])]
+	args = [(max_tries//(global_data['cores_count']),) for i in range(global_data['cores_count'])]
 	results = pool.starmap(scrape,args)
 	for result in results:
 		useful_documents = useful_documents + result[0]
